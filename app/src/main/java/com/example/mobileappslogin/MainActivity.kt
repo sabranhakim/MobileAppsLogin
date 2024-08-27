@@ -23,12 +23,10 @@ class MainActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             if (username == "admin" && password == "123456") {
-                // Navigate to PageAdminActivity
                 val intent = Intent(this, PageAdminActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
-                // Show a toast message if login fails
                 Toast.makeText(this, "Invalid Username or Password", Toast.LENGTH_SHORT).show()
             }
         }
